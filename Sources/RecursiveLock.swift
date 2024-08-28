@@ -15,7 +15,7 @@ import Foundation
 /// - https://serhiybutz.medium.com/swift-mutex-benchmark-b21ee293d9ad
 ///
 /// Class-type paired with pointer-use guarantees address stability.
-internal final class RecursiveLock {
+public final class RecursiveLock {
     // MARK: Lifecycle
 
     internal init() {
@@ -89,7 +89,7 @@ internal final class RecursiveLock {
 }
 #endif
 
-extension RecursiveLock {
+public extension RecursiveLock {
     /// Guarantee exclusive thread access to certain logic.
     ///
     /// Claims ownership over this lock within the scope of the closure,

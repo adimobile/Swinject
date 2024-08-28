@@ -28,7 +28,7 @@ public final class Container {
     private let synchronized: Bool
     internal var currentObjectGraph: GraphIdentifier?
     internal var graphInstancesInFlight = [ServiceEntryProtocol]()
-    internal let lock: RecursiveLock // Used by SynchronizedResolver.
+    public let lock: RecursiveLock // Used by SynchronizedResolver.
     internal var behaviors = [Behavior]()
 
     internal init(
